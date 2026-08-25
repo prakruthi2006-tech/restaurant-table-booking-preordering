@@ -1,0 +1,42 @@
+@startuml
+
+left to right direction
+
+skinparam packageStyle rectangle
+
+actor Diner
+actor "Restaurant Manager" as Manager
+actor "Kitchen Staff" as Kitchen
+
+rectangle "Restaurant Table Booking & Pre-Ordering System" {
+
+    usecase "View Floor Plan" as UC1
+    usecase "Select Table" as UC2
+    usecase "Reserve Table" as UC3
+    usecase "Check Table Availability" as UC4
+    usecase "Confirm Reservation" as UC5
+    usecase "Pre-Order Food" as UC6
+    usecase "Calculate Preparation\nTimeline" as UC7
+    usecase "Manage Reservations" as UC8
+    usecase "Manage Pre-Orders" as UC9
+    usecase "View Pre-Order Ticket" as UC10
+}
+
+Diner --> UC1
+Diner --> UC2
+Diner --> UC3
+Diner --> UC6
+
+Manager --> UC8
+Manager --> UC9
+
+Kitchen --> UC10
+Kitchen --> UC7
+
+UC3 ..> UC4 : <<include>>
+UC3 ..> UC5 : <<include>>
+
+UC6 ..> UC3 : <<extend>>
+UC6 ..> UC7 : <<include>>
+
+@enduml
