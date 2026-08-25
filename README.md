@@ -1,6 +1,6 @@
-## NAME-PRAKRUTHI.NK
-##SRN-PES2UG24AM118
-##SECTION-5B
+## NAME- PRAKRUTHI.NK
+## SRN-PES2UG24AM118
+## SECTION-5B
 # Restaurant Table Booking & Pre-Ordering App
 
 ## Software Engineering Lab 1
